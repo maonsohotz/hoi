@@ -1,0 +1,14 @@
+local button = script.Parent
+local isEnabled = false
+
+button.Text = "🔫 เปิดโหมดตีไกล"
+
+button.MouseButton1Click:Connect(function()
+	isEnabled = not isEnabled
+	button.Text = isEnabled and "❌ ปิดโหมดตีไกล" or "🔫 เปิดโหมดตีไกล"
+	
+	_G.LongRangeEnabled = isEnabled
+end)
+
+_G.LongRangeEnabled = false
+
